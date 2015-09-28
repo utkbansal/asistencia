@@ -10,9 +10,16 @@ if (Meteor.isClient) {
 
     Template.body.events({
         "click .fixed-action-btn": function (event) {
-            console.log('here');
             event.preventDefault();
             $('#modal1').openModal();
+        }
+
+    });
+
+    Template.modal.events({
+        "submit .new-subject": function (event) {
+            event.preventDefault();
+            console.log(event.target.name.value)
         }
     })
 
