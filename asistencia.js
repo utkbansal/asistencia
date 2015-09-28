@@ -1,7 +1,13 @@
 if (Meteor.isClient) {
-        Template.nav.onRendered(function () {
+    Template.nav.onRendered(function () {
         this.$(".button-collapse").sideNav();
+
     });
+
+    Template.modal.onRendered(function () {
+        this.$('.modal-trigger').leanModal();
+    })
+
 }
 
 if (Meteor.isServer) {
