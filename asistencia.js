@@ -20,6 +20,11 @@ if (Meteor.isClient) {
         "submit .new-subject": function (event) {
             event.preventDefault();
             console.log(event.target.name.value)
+        },
+
+        "click .cancel": function (event) {
+            event.preventDefault();
+            $('#modal1').closeModal();
         }
     })
 
