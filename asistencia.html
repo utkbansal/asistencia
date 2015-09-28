@@ -50,13 +50,26 @@
     <!-- Modal Structure -->
     <div id="modal1" class="modal">
         <div class="modal-content">
-            <h4>Modal Header</h4>
+            <h4>Add a new Subject</h4>
 
-            <p>A bunch of text</p>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="first_name" type="text"
+                           class="validate">
+                    <label for="first_name">Subject Name</label>
+                </div>
+            </div>
         </div>
         <div class="modal-footer">
-            <a href="#!"
-               class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+            <button class="btn waves-effect waves-light save" type="submit"
+                    name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+            <button class="btn waves-effect waves-light cancel" type="submit"
+                    name="action">Cancel
+                <i class="material-icons right">cancel</i>
+            </button>
+
         </div>
     </div>
 </template>
