@@ -7,6 +7,13 @@
 {{> nav}}
 
 {{> modal}}
+<div class="row">
+    <div class="col s12 ">
+        {{#each subjects}}
+            {{>subject}}
+        {{/each}}
+    </div>
+</div>
 
 <div class="fixed-action-btn modal-trigger" style="bottom: 45px; right: 24px;">
     <a class="btn-floating btn-large red">
@@ -16,6 +23,14 @@
 
 </body>
 
+
+<template name="subject">
+
+    <div class="card-panel teal">
+        <span class="white-text">{{ name }}</span>
+    </div>
+
+</template>
 
 <template name="nav">
     <nav>

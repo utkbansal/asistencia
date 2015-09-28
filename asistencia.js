@@ -1,3 +1,5 @@
+Subjects = new Mongo.Collection('subjects');
+
 if (Meteor.isClient) {
     Template.nav.onRendered(function () {
         this.$(".button-collapse").sideNav();
@@ -16,10 +18,18 @@ if (Meteor.isClient) {
 
     });
 
+    Template.body.helpers({
+        subjects: function () {
+            return Subjects.find({});
+        }
+    });
+
     Template.modal.events({
         "submit .new-subject": function (event) {
             event.preventDefault();
-            console.log(event.target.name.value)
+            subjectName = event.target.name.value;
+            console.log(subjectName);
+            Subjects.insert({name: subjectName, createdAt: new Date()});
         },
 
         "click .cancel": function (event) {
